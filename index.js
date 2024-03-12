@@ -13,7 +13,14 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/test', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: 'hi, i am from test server'
+    });
+});
 
-app.listen(5005, () => {
+
+app.listen(process.env.PORT, () => {
     console.log('server listening properly')
 });
